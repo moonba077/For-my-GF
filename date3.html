@@ -1,0 +1,108 @@
+<html>
+    <head><link rel="stylesheet" href="style.css"></head>
+    <body>
+        <title>For my gorgeous Girlfriend</title>
+        <style>
+            body{
+                background:  url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAA1BMVEX/7sxLzVnOAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO8GxYgAAb0jQ/cAAAAASUVORK5CYII=") no-repeat;
+                background-size:  cover;
+                justify-content: center; /* Center horizontally */
+                align-items: center;
+            }
+            *{
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            .i{
+                font-size: 50px;
+                font-style: monsterrat;
+                text-align: center;
+                color: rgb(244, 154, 169);
+            }
+            .e{
+                font-size: 20px;
+                font-style: monsterrat;
+                text-align: center;
+                color: rgb(244, 116, 137);
+            }
+        
+        </style>
+        <h1 class="i"><i>Are you free on...</i></h1>
+        <h4 class="e">(Select a date)</h4>
+        <h4 class="e">Which day:</h4>
+        <div>
+            <div class="calendar">
+                <div class="calendar-header">December 2024</div>
+                <div class="calendar-grid">
+                    <div class="day-name">Mon</div>
+                    <div class="day-name">Tue</div>
+                    <div class="day-name">Wed</div>
+                    <div class="day-name">Thu</div>
+                    <div class="day-name">Fri</div>
+                    <div class="day-name">Sat</div>
+                    <div class="day-name">Sun</div>
+                    <!-- Days of the month -->
+                    <div class="day"></div>
+                    <div class="day"></div>
+                    <div class="day"></div>
+                    <div class="day"></div>
+                    <div class="day"></div>
+                    <div class="day"></div>
+                    <div class="day">1</div>
+                    <div class="day">2</div>
+                    <div class="day">3</div>
+                    <div class="day">4</div>
+                    <div class="day">5</div>
+                    <div class="day">6</div>
+                    <div class="day">7</div>
+                    <div class="day">8</div>
+                    <div class="day">9</div>
+                    <div class="day">10</div>
+                    <div class="day">11</div>
+                    <div class="day">12</div>
+                    <div class="day">13</div>
+                    <div class="day">14</div>
+                    <div class="day">15</div>
+                    <div class="day">16</div>
+                    <div class="day">17</div>
+                    <div class="day">18</div>
+                    <div class="day">19</div>
+                    <div class="day">20</div>
+                    <div class="day">21</div>
+                    <div class="day">22</div>
+                    <div class="day">23</div>
+                    <div class="day">24</div>
+                    <div class="day">25</div>
+                    <div class="day">26</div>
+                    <div class="day">27</div>
+                    <div class="day">28</div>
+                    <div class="day">29</div>
+                    <div class="day">30</div>
+                    <div class="day">31</div>
+                </div>
+            </div>
+            <div class="info" id="selected-day-info">No day selected</div>
+        </div>
+    
+        <script>
+            // Select all day elements
+            const days = document.querySelectorAll('.day');
+            const info = document.getElementById('selected-day-info');
+    
+            days.forEach(day => {
+                day.addEventListener('click', () => {
+                    // Remove 'selected' class from previously selected day
+                    days.forEach(d => d.classList.remove('selected'));
+    
+                    // Add 'selected' class to clicked day
+                    day.classList.add('selected');
+    
+                    // Update the selected day info
+                    const selectedDay = day.textContent.trim();
+                    if (selectedDay) {
+                        info.textContent = `You selected: December ${selectedDay}, 2024`;
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
